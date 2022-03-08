@@ -1,0 +1,252 @@
+:root {
+  --dark-blue: #363f5f;
+  --green: #49aa26;
+  --light-green: #3dd705;
+  --red: #a01414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  font-size: 93.75%;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: "Inter", sans-serif;
+}
+
+header {
+  background-color: hsl(104, 37%, 21%);
+  padding: 2rem 0 10rem;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--dark-blue);
+
+  font-weight: normal;
+}
+
+button {
+  color: var(--green);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--light-green);
+}
+
+.new {
+  margin-bottom: 0.8rem;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+  margin-bottom: 2rem;
+  color: var(--dark-blue);
+}
+
+.card h3 {
+  font-weight: normal;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.card p {
+  margin-top: 1rem;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.card.total {
+  background-color: var(--green);
+  color: #fff;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: #f2f0f5;
+  padding: 2.4rem;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--green);
+  padding: 1.2rem;
+  border-radius: 0.25rem;
+}
+
+.btn-destructive {
+  color: var(--red);
+  border: 2px solid var(--red);
+  padding: 1.2rem;
+  border-radius: 0.25rem;
+}
+
+.btn-destructive:hover {
+  color: #7c2525;
+}
+
+.btn-primary:hover {
+  background: var(--light-green);
+  color: #f2f0f5;
+}
+
+#balance {
+  margin-top: -8rem;
+}
+
+#transactions {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
+
+#transactions table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+  color: #969cb3;
+}
+
+#transactions table th {
+  background: #fff;
+  font-weight: normal;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+#transactions table td {
+  background: #fff;
+  padding: 1rem 2rem;
+}
+
+#transactions table tbody tr {
+  opacity: 0.75;
+}
+
+#transactions table tbody tr:hover {
+  opacity: 1;
+}
+
+#form h2 {
+  margin-top: 0;
+}
+
+#form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.help {
+  color: #4f5056;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.actions button {
+  flex: 1;
+}
+
+#form form input {
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.8rem;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+td.description {
+  color: var(--dark-blue);
+}
+
+td.income {
+  color: #12a454;
+}
+
+td.expense {
+  color: var(--red);
+}
+
+footer.container {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--dark-blue);
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
